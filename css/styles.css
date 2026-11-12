@@ -1,11 +1,76 @@
 @layer reset, base, layout, components, utilities, states, overrides;
 
 @layer reset {
-    /* Browser defaults and basic resets */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
 }
 
 @layer base {
-    /* Colors, fonts, spacing, and global styles */
+    :root {
+        /* Colors */
+        --color-background: #fff9f0;
+        --color-surface: #ffffff;
+        --color-text: #263238;
+        --color-primary: #287c78;
+        --color-accent: #ea715f;
+        --color-highlight: #f5c95a;
+        --color-border: #d9dedb;
+        --color-focus: #174e98;
+
+        /* Typography */
+        --font-body: Arial, Helvetica, sans-serif;
+        --font-heading: Arial, Helvetica, sans-serif;
+
+        --font-size-base: 1rem;
+        --font-size-heading: 2rem;
+
+        /* Spacing */
+        --space-small: 0.5rem;
+        --space-medium: 1rem;
+        --space-large: 2rem;
+        --space-extra-large: 3rem;
+
+        /* Shape */
+        --radius-small: 0.5rem;
+        --radius-medium: 1rem;
+        --radius-large: 1.5rem;
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-heading);
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: var(--font-size-heading);
+    }
+
+    a {
+        color: var(--color-primary);
+    }
 }
 
 @layer layout {
@@ -216,78 +281,7 @@
     /* Intentional exceptions */
 }
 
-@layer reset {
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-    }
-
-    img {
-        max-width: 100%;
-        display: block;
-    }
-}
-
-@layer base {
-    :root {
-        /* Colors */
-        --color-background: #fff9f0;
-        --color-surface: #ffffff;
-        --color-text: #263238;
-        --color-primary: #287c78;
-        --color-accent: #ea715f;
-        --color-highlight: #f5c95a;
-        --color-border: #d9dedb;
-        --color-focus: #174e98;
-
-        /* Typography */
-        --font-body: Arial, Helvetica, sans-serif;
-        --font-heading: Arial, Helvetica, sans-serif;
-
-        --font-size-base: 1rem;
-        --font-size-heading: 2rem;
-
-        /* Spacing */
-        --space-small: 0.5rem;
-        --space-medium: 1rem;
-        --space-large: 2rem;
-        --space-extra-large: 3rem;
-
-        /* Shape */
-        --radius-small: 0.5rem;
-        --radius-medium: 1rem;
-        --radius-large: 1.5rem;
-    }
-
-    body {
-        background-color: var(--color-background);
-        color: var(--color-text);
-        font-family: var(--font-body);
-        font-size: var(--font-size-base);
-        line-height: 1.6;
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-family: var(--font-heading);
-        line-height: 1.2;
-    }
-
-    h1 {
-        font-size: var(--font-size-heading);
-    }
-
-    a {
-        color: var(--color-primary);
-    }
-}
 
 @media print {
 
